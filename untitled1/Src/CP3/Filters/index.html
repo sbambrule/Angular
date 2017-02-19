@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../../libs/angular.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-controller="MainController as main">
+    <p> First Name :{{main.user.firstName |  uppercase}}</p>
+    <p> Last Name :{{main.user.lastName | uppercase}}</p>
+    <p> Account Typee :{{main.user.accountType | lowercase}}</p>
+    <p> First balance :{{main.user.balance | currency:'USD $':0}}</p>
+
+</div>
+</body>
+</html>

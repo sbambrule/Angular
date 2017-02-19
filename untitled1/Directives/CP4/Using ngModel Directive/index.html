@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../../libs/angular.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-controller="MainController as main">
+   <table class="user-form">
+       <tr>
+           <td>First Name:</td>
+           <td><input type="text" ng-model="main.user.firstName"></td>
+       </tr>
+       <tr>
+           <td>Last Name:</td>
+           <td><input type="text" ng-model="main.user.lastName"></td>
+       </tr>
+       <tr>
+           <td>Email:</td>
+           <td><input type="text" ng-model="main.user.email"></td>
+       </tr>
+       <tr>
+           <td>Add mailing list:</td>
+           <td><input type="checkbox" ng-model="main.user.optIn"></td>
+       </tr>
+       <tr>
+           <td>Colors</td>
+           <td>
+               <select ng-model="main.user.selectedColor">
+                   <option ng-repeat="option in main.colors" value="{{option.value}}">{{option.name}}</option>
+
+               </select>
+           </td>
+       </tr>
+       <tr>
+           <td>Comment:</td>
+           <td><textarea   ng-model="main.user.comment"></textarea></td>
+       </tr>
+
+
+   </table>
+    <hr/>
+    <p>Name: {{main.user.firstName}} {{main.user.lastName}}</p>
+    <p>Name: {{main.user.email}}</p>
+    <p>Name: {{main.user.optIn}} </p>
+    <p>Name: {{main.user.comment}} </p>
+    <p>Color :<div style="width:16px;height: 16px;background-color:{{main.user.selectedColor}}"></div> </p>
+
+</div>
+
+</body>
+</html>

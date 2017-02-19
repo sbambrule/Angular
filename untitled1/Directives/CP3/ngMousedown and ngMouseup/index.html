@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../../libs/angular.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<body>
+<div ng-controller="MainController as main">
+
+    <img src="../../../libs/ToaJPp1.jpg"
+         ng-mousedown="main.doMouseDown($event)"
+         ng-mouseup="main.doMouseUp($event)"
+
+         width="384" height="300"/>
+
+    <p>Mouse Down :{{ main.mouseDownCount}}</p>
+    <p>Mouse Up :{{ main.mouseUpCount}}</p>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../../../libs/angular.min.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<div ng-controller="ParentController">
+    <input ng-model="Mode.name">
+    <p>This is the parent: {{Mode.name}}</p>
+
+    <div ng-controller="ChildController">
+        <input ng-model="Mode.name">
+
+        <p>This is child :{{Mode.name}}</p>
+    </div></div>
+</body>
+
+<div ng-controller="ParentController">
+    <input ng-model="Mode.name">
+    <p>This is the parent: {{Mode.name}}</p>
+</div>
+
+
+</body>
+</html>
